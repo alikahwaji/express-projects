@@ -9,23 +9,26 @@ html
   head
   body
     nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
-      a.navbar-brand(href='#') Navbar
+      a.navbar-brand(href='#') Shop repair
       |       
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
       |       
       #navbarsExampleDefault.collapse.navbar-collapse
         ul.navbar-nav.mr-auto
-          li.nav-item.active
-            a.nav-link(href='#')
-              | Home 
+          li.nav-item(class=title=='Home' ? 'active' : undefined)
+            a.nav-link(href='/')
+              | Home
               span.sr-only (current)
           |           
-          li.nav-item
-            a.nav-link(href='#') Link
-          |           
-          li.nav-item
-            a.nav-link.disabled(href='#') Disabled
+          li.nav-item(class=title=='About' ? 'active' : undefined)
+            a.nav-link(href='/about') About
+          |     
+          li.nav-item(class=title=='Services' ? 'active' : undefined)
+            a.nav-link(href='/services') Services
+          |     
+          li.nav-item(class=title=='Contact' ? 'active' : undefined)
+            a.nav-link.disabled(href='/contact') Contact
           |           
           li.nav-item.dropdown
             a#dropdown01.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
