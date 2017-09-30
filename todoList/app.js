@@ -10,4 +10,4 @@ const app = express()
 
 app.user(bodyPaser.json())
 app.user(bodyPaser.urlencoded({extended: false}))
-
+app.use(express.static(path.join(__dirname, 'public')))
