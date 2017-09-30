@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "Ali Kahwaji",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "mongodb": "^2.2.31"
+  }
 }
