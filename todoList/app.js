@@ -10,7 +10,8 @@ const port = 3000
 
 const app = express()
 
-const mongoClient = require ('mongodb').mongoClient
+const MongoClient = require ('mongodb').MongoClient
+const url = 'mongodb://localhost:27017/todoapp'
 // body parser middleware 
 
 app.use(bodyParser.json())
@@ -21,6 +22,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
+
+// Connect to mongodb
+
+MongoClient.connect(url, (err, database) => {
+    console.log('Mongodb is connected...')
+    if(err) throw err
+})
 
 app.get('/', (req, res, next) => {
     res.render('index')
