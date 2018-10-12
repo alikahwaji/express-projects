@@ -1,0 +1,12 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "shoprepair/package.json",
+        "todoList/package.json",
+        "web-server/package.json"
+      ]
+    }
+  }
+}
